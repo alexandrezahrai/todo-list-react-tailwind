@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0F172A;
+  color: whitesmoke;
+}
+
+container {
+  max-width: 1300px;
+  margin-inline: auto;
+  padding-inline: 36px;
+}
+
+ul {
+  text-align: left;
+  list-style: none;
+}
+
+.todos, .completed {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.text-green {
+  color: green;
+}
+
+.text-red {
+  color: red;
+}
+
+/* Buttons */
+.button {
+  @apply py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border disabled:opacity-50 disabled:pointer-events-none whitespace-nowrap;
+}
+
+.button-light {
+  @apply button;
+  @apply border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50;
+}
+
+.button-red {
+  @apply button;
+  @apply bg-red-100 text-red-800 hover:bg-red-200 dark:hover:bg-red-900 dark:text-red-500 dark:hover:text-red-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600;
+}
+
+.button-blue {
+  @apply button;
+  @apply border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200;
+}
